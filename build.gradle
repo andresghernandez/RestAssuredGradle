@@ -52,3 +52,15 @@ dependencies {
 }
 
 gradle.startParameter.continueOnFailure = true
+
+task updateWorkItemStatus(type: Exec) {
+    commandLine 'curl', '-X', 'PATCH', '-H', 'Content-Type: application/json-patch+json', '-d', """
+    [
+        {
+            "op": "add",
+            "path": "/fields/System.State",
+            "value": "Closed"
+        }
+    ]
+    """, 'https://dev.azure.com/andreshernandezautomatizacion/PruebaAut/_apis/wit/workitems/8?api-version=6.0'
+}
