@@ -62,7 +62,7 @@ task updateWorkItemStatus(type: Exec) {
         {
             'op': 'add',
             'path': '/fields/System.State',
-            'value': 'Ready'
+            'value': 'Closed'
         }
     ]
     """,
