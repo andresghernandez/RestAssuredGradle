@@ -68,3 +68,19 @@ task updateWorkItemStatus(type: Exec) {
     """,
      'https://dev.azure.com/andreshernandezautomatizacion/PruebaAut/_apis/wit/workitems/8?api-version=6.0'
 }
+
+task updateWorkItemResults(type: Exec) {
+    commandLine 'curl', '-X',  'PATCH', '-H', 'Content-Type: application/json',  '-u', 'andreshernandezautomatizacion@outlook.com:dejjpnvzklqoswj2lnv3nrq3nj672zfzwansur7luannpt7miw5q', '-d', 
+    """
+    [
+    	{
+	        'id': 2,
+	        'results': {
+	            'outcome': 'Passed'
+	        }
+        }
+    ]
+    """,
+     'https://dev.azure.com/andreshernandezautomatizacion/PruebaAut/_apis/testplan/Plans/5/Suites/7/TestPoint?api-version=6.1-preview.2'
+}
+
