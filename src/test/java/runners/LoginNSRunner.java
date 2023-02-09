@@ -14,7 +14,7 @@ import org.junit.Test;
 
 public class LoginNSRunner {
 
-  @Before
+  /*@Before
   public void setUp() {
     RestAssured.baseURI = "https://reqres.in/";
     RestAssured.basePath = "api";
@@ -36,5 +36,5 @@ public class LoginNSRunner {
     int statusCode = response.statusCode();
 
     assertThat(statusCode, equalTo(200));
-  }
+  }*/
 }

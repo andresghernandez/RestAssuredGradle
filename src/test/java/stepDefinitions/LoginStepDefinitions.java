@@ -30,6 +30,16 @@ public class LoginStepDefinitions {
             + "}";
     park.attemptsTo(LoginUser.loginuser(body));
   }
+  
+  @When("^el envia los datos para loguearse erroneos$")
+  public void elEnviaLosDatosParaLoguearseErroneos() {
+    String body =
+        "{\n"
+            + "    \"email\": \"eve.holt@reqres.in\",\n"
+            + "    \"password123456\": \"cityslicka\"\n"
+            + "}";
+    park.attemptsTo(LoginUser.loginuser(body));
+  }
 
   @Then("^el obtiene una respuesta exitosa$")
   public void elObtieneUnaRespuestaExitosa() {
