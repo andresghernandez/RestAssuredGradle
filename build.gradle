@@ -56,7 +56,7 @@ gradle.startParameter.continueOnFailure = true
 
 
 task updateWorkItemStatus(type: Exec) {
-    commandLine 'curl', '-X',  'PATCH', '-H', 'Content-Type: application/json-patch+json',  '-u', 'andreshernandezautomatizacion@outlook.com:dejjpnvzklqoswj2lnv3nrq3nj672zfzwansur7luannpt7miw5q', '-d', 
+    commandLine 'curl', '-X',  'PATCH', '-H', 'Content-Type: application/json-patch+json',  '-u', 'andreshernandezautomatizacion@outlook.com:b4mfv36glbl5bcnoj2sv3lthob3dx3fmmf3chhwoop75lonkjmhq', '-d', 
     """
     [
         {
@@ -70,7 +70,7 @@ task updateWorkItemStatus(type: Exec) {
 }
 
 task updateWorkItemResults(type: Exec) {
-    commandLine 'curl', '-X',  'PATCH', '-H', 'Content-Type: application/json',  '-u', 'andreshernandezautomatizacion@outlook.com:dejjpnvzklqoswj2lnv3nrq3nj672zfzwansur7luannpt7miw5q', '-d', 
+    commandLine 'curl', '-X',  'PATCH', '-H', 'Content-Type: application/json',  '-u', 'andreshernandezautomatizacion@outlook.com:b4mfv36glbl5bcnoj2sv3lthob3dx3fmmf3chhwoop75lonkjmhq', '-d', 
     """
     [
     	{
